@@ -1,0 +1,110 @@
+/* CSS Reset */
+/* Using reset provided from curriculum */
+body,
+header,
+nav,
+main,
+footer,
+img,
+div,
+section,
+aside,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #E0FFFF;
+    color: #FFD700;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    padding: 5% 0% 1%;
+
+    /*
+    //Included image is too big, cannot figure out how to scale an keep consistent resolution for different devices without using too many resources/images. Switch header images depending on screen size?
+
+    background-image: url(../media/Monster\ Hunter\ No\ Logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: vw;
+    height: 13vh;
+    */
+}
+
+nav {
+    /* will have to dynamically change size for viewport, down to hamburger if needed, bar otherwise */
+    background-color: #4B0082;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 6px .75em;
+    border-right: 1px solid #fff;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
+    /* padding: auto .75em; /*Vertical padding doesn't have effect on inline-block elems.*/
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    background-color: #D2B48c;
+    overflow: auto;
+}
+
+#intro{
+    margin: 5%;
+}
+
+#equipment{
+    padding: 4px;
+}
+
+.textBox {
+    padding-top: 10px;
+    overflow: auto;
+    background-color: #A0522D;
+ /* Needs to separate from text bc of blur function
+    background: linear-gradient(0deg, rgba(52, 39, 1, .8), rgba(10, 8, 0, .8));
+    filter: blur(3px);
+
+.cornerSmall{
+    background-image: url(../media/deco\ corner.png);
+    background-repeat: none;
+}
+*/
+}
+
+/* Media Query for Print */
+@media print{
+    body{
+        background-color: #fff;
+        color: #000;
+    }        
+}
